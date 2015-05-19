@@ -1,0 +1,13 @@
+mynode:
+  build: .
+  working_dir: /code/mean
+  command: node server
+  volumes:
+   - /c/Users/kskalvar/mean-stack/mean:/code/mean
+  ports:
+   - "3000:3000"
+  links:
+   - mongo:mongo
+mongo:
+   image: mongo
+
