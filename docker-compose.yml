@@ -2,7 +2,7 @@ web:
   build: .
   links:
    - db
-  command: node server
+  command: bash -c "bower update --allow-root && node server"
   ports:
    - "3000:3000"
   volumes:
